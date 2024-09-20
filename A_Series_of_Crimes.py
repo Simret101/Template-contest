@@ -1,0 +1,48 @@
+import sys
+import math, heapq, random
+import re
+from collections import Counter, defaultdict, deque
+from bisect import bisect_right, bisect_left
+from math import ceil, sqrt, gcd
+
+INF=1e9
+ 
+def hi():return int(sys.stdin.readline().strip())
+
+def hey():return list(map(int, sys.stdin.readline().strip().split()))
+
+def hello():return sys.stdin.readline().strip()
+ 
+ 
+def howdy():return sys.stdin.readline().strip().split()
+ 
+ 
+def hi_dig():return [int(i) for i in (list(sys.stdin.readline().strip()))]
+ 
+ 
+def hel():return list(sys.stdin.readline().strip())
+
+
+n,m=hey()
+ans=[]
+for _ in range(n):
+    ans.append(hello())
+res1=[]
+res2=[]
+for i in range(n):
+    for  j in range(m):
+        if ans[i][j]=="*":
+            res1.append(i+1)
+            res2.append(j+1)
+ans=[]
+for i in res1:
+    if res1.count(i)==1:
+        ans.append(i)
+for j in res2:
+    if res2.count(j)==1:
+        ans.append(j)
+print(*ans)
+
+             
+
+
